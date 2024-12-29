@@ -4,9 +4,14 @@
 }
 
 html {
+    font-size: 16px;
+
     --black: rgb(23, 18, 18);
     --gray: rgb(132, 121, 121);
     --white: rgb(226, 215, 215);
+
+    --light1: rgb(180, 167, 167);
+    --dark1: rgb(88, 81, 81);
 
     --red: rgb(176, 53, 56);
     --yellow: rgb(236, 172, 111);
@@ -18,7 +23,7 @@ html {
 body {
     color: var(--black);
     background-color: var(--white);
-    font-size: 100%;
+    font-size: 1em;
     width: 100vw;
     font-family: 'Aileron';
 }
@@ -175,15 +180,15 @@ p > a {
 }
 
 .content__pieces--programming {
-    background-color: var(--blue);
+    background-color: var(--light1);
 }
 
 .content__pieces--illustration {
-    background-color: var(--yellow);
+    background-color: var(--dark1);
 }
 
 .content__pieces--animation {
-    background-color: var(--red);
+    background-color: var(--gray);
 }
 
 .content__box--link
@@ -273,17 +278,17 @@ p > a {
 
 #categories__programming {
     grid-area: categories__programming;
-    background-color: var(--blue);
+    background-color: var(--light1);
 }
 
 #categories__illustration {
     grid-area: categories__illustraion;
-    background-color: var(--yellow);
+    background-color: var(--dark1);
 }
 
 #categories__animation {
     grid-column: span 2;
-    background-color: var(--red);
+    background-color: var(--gray);
 }
 
 @media screen and (max-width: 770px)
@@ -299,7 +304,6 @@ p > a {
         justify-self: center;
         width: 80%;
         padding: 2em;
-        background-color: var(--yellow);
     }
 
     .content__pieces {
@@ -312,5 +316,31 @@ p > a {
 
     .content__pieces--box {
         justify-self: center;
+    }
+}
+
+@media screen and (max-width: 605px)
+{
+    body {
+        font-size: 0.9em;
+    }
+
+    .banner__title {
+        padding-top: 3em;
+    }
+
+    h1 {
+        line-height: 90px;
+    }
+}
+
+@media screen and (max-width: 450px)
+{
+    body {
+        font-size: 0.7em;
+    }
+
+    .banner__title {
+        padding-top: 2em;
     }
 }
